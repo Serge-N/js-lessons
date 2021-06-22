@@ -15,4 +15,3 @@ class Vechicle {
         console.log("Sterering and moving forward!");
     }
 }
-
