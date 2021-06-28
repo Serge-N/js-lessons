@@ -15,3 +15,5 @@ class Vechicle {
         console.log("Sterering and moving forward!");
     }
 }
+
+// js like c# does not provide multiple inheritance.
