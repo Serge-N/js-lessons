@@ -1,3 +1,4 @@
+"use strict"
 // a prototyped object is an object linked to another object
 
 var anotherObject = {
@@ -23,3 +24,18 @@ console.log( anotherObject.a );
 console.log( myObject.a ); 
 
 console.log( myObject.hasOwnProperty( "a" ) );
+
+// keyword new hijacks any normal function
+
+function NothingSpecial(){
+    console.log("\nDon't mind me!");
+}
+
+var a = new NothingSpecial();
+//var  b = NothingSpecial();
+
+// observe this :
+
+a;
+
+// b;`
