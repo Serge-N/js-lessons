@@ -1,0 +1,1 @@
+//use  OLOO (objects linked to other objects) instead of classes in js
