@@ -4,5 +4,3 @@
 // you don't need to presize your arrays.
 
 // avoid empty slots
-
-//
