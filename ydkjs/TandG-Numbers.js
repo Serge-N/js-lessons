@@ -59,3 +59,5 @@ console.log("Is the result a number?" + a === NaN);
 
 var k = 0/-3; // -0
 var z = 0*-3 // -0 These result into negative zero.
+
+console.log( Object.is( z, -0) ); // use this to check for equalilty use only for special cases like this.
