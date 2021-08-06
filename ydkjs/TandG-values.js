@@ -14,3 +14,9 @@ function foo(){
 }
 
 foo("bar","baz" );
+
+// slice() with no parameters by default makes an entirely new shallow copy of the array.
+
+// strings, numbers are assigned/passed by values
+
+// objects are are passed by reference, and this reference is values only.
