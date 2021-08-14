@@ -23,3 +23,15 @@ var e = {
 };
 
 console.log( JSON.stringify(e) );
+
+// To Number - becomes 
+
+// In JS numbers are numbers and boleans are booleans
+
+// falsy values include
+// undefined
+// null
+// false
+// 0
+// NaN
+// ""
