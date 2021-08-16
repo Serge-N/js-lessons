@@ -17,12 +17,12 @@ console.log(d.toString());
 // Json.stringify - does not work on functions, symbols, 
 
 var e = {
-    b: 42,
-    c: "42",
-    d: [1, 2, 3]
+  b: 42,
+  c: "42",
+  d: [1, 2, 3]
 };
 
-console.log( JSON.stringify(e) );
+console.log(JSON.stringify(e));
 
 // To Number - becomes 
 
@@ -35,3 +35,37 @@ console.log( JSON.stringify(e) );
 // 0
 // NaN
 // ""
+
+// truth values
+
+var n = "false";
+
+var m = "0";
+
+var j = "''";
+
+var l = Boolean(n && m && j);
+
+console.log(l);
+
+// Eplicit Coersion
+
+var z = 42;
+
+var x = "3.142";
+
+var s = Number(x); // +x
+
+var y = String(z);  // could have used toString()
+
+console.log(typeof (s));
+
+console.log(typeof (y));
+
+// use +string for numbers
+
+var c = "3.142";
+
+var d = 5+ +c;
+
+console.log(d);
