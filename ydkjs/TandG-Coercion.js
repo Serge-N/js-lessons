@@ -69,3 +69,50 @@ var c = "3.142";
 var d = 5+ +c;
 
 console.log(d);
+
+// ~ and | bitwise operator
+// | bitwise OR
+
+// The ~ operator first “coerces” to 
+// a 32-bit number value, and then performs a bitwise negation (flip‐ping each bit’s parity).
+// mathematically speaking it does two's compliment
+console.log( 0 | NaN );
+
+console.log( ~42 ); // ~x means -(x+1);
+
+var a = "Hello World";
+
+if (a.indexOf( "lo" ) >= 0) { // true
+  console.log( "found it!");
+}
+
+if (a.indexOf( "lo" ) != -1) { // true
+  console.log( "found it");
+}
+
+if (a.indexOf( "ol" ) < 0) { // true
+  console.log( "not found!");
+}
+
+if (a.indexOf( "ol" ) == -1) { // true
+  console.log("not found!");
+}
+
+// This code above can be written as follows:
+
+console.log(~a.indexOf( "lo" )); // <-- truthy!
+
+if (~a.indexOf( "lo" )) { // true
+  console.log( "found it!");
+}
+
+console.log(~a.indexOf( "ol" )); // <-- falsy!
+
+!~a.indexOf( "ol" ); // true
+
+if (!~a.indexOf( "ol" )) { // true
+  console.log( "found it!");
+}
+
+// ~~ the first applies ToInt32 Coersoion and the second 
+// only works with + Integers
