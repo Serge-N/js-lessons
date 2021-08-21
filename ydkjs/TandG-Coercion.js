@@ -116,3 +116,15 @@ if (!~a.indexOf( "ol" )) { // true
 
 // ~~ the first applies ToInt32 Coersoion and the second 
 // only works with + Integers
+
+// parsing Numbers
+var a = "42";
+var b = "42px";
+
+console.log( Number( a ));
+console.log( parseInt( a ));
+
+console.log( Number( b ));
+console.log( parseInt( b ));
+
+// use parseInt if the values on right don't matter, also pass a base as a second parameter
