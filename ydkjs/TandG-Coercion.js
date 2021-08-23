@@ -128,3 +128,24 @@ console.log( Number( b ));
 console.log( parseInt( b ));
 
 // use parseInt if the values on right don't matter, also pass a base as a second parameter
+// Bolean Corsions 
+
+// ! can also be used to coerce to boolean and flip the logic
+
+// The ternary operator in JS uses implit coersion.
+
+/// going implict
+
+var a = [1,2];
+var b= [3,4];
+
+console.log(a+b);
+// || and &&
+
+a = 42;
+b ="abc";
+c = null;
+
+console.log(a||b);
+console.log(a && b);
+console.log(c||b);
