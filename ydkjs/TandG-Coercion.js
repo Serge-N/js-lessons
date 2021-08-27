@@ -134,3 +134,11 @@ console.log(c || b);
 
 // loose == allows coersion and === doen't allow coersion
 // both check for the type, what matters is how they respond.
+
+var x = "42"; // truthy
+var y = true;
+
+console.log(x == y); 
+
+// nevere ever use == true or false because these are converted a number, i.e 1
+// use implict or explict instead
