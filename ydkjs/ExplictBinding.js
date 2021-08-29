@@ -28,5 +28,3 @@ bar();
  setTimeout(bar, 100);
 
 // bar.call( window ); does not work in node
-
-//
