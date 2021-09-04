@@ -25,7 +25,7 @@ Swappable: Yes, - with ts lessons
 ##### Basics Part 2
 *  Async/Await
 *  Promises
-*  Classes
+*  Classes ✔
 *  Rest/Spread Syntax
 *  Array/Object Iterators
 *  Array Destructuring
