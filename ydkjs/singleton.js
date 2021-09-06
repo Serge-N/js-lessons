@@ -19,3 +19,6 @@ var foo =(function CoolModule(){
 
 foo.doSomething();
 foo.doAnother();
+
+
+// classes features should be used to implement on the internal part of the api
