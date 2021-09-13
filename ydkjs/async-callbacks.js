@@ -28,3 +28,7 @@ console.log(addNumbersBetter(2, 5));
 //console.log(addNumbersBetter(2, "5"));
 
 // trust but verify
+
+// Node Js uses the "error first style"
+
+// always invoke callbacks aynchrously
