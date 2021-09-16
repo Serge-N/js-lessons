@@ -39,3 +39,27 @@ delay(100) // step 1
     .then(function STEP5() {
         console.log("step 5 (after another 50ms)");
     })
+
+// Terminology
+
+// The constructor for a promise are uslly two callbacks
+// the first is usally used to mark a fullied promise
+// the second a rejected promise.
+// Best Practice : use reject for the second parameter and reject for the first parameter.
+
+// Error Rejection
+
+// use the error first-first callback style
+// note that a try catch is synchronus in js
+
+// one way of catching errors
+
+var p = Promise.resolve(42);
+
+p.then(
+    function fulfilled(msg) {
+        // numbers don't have string functions,
+        // so will throw an error
+        console.log(msg.toLowerCase());
+    }
+). done(null, handleErrors); // <-if this handle errors fails then its error would be thrown globally.
