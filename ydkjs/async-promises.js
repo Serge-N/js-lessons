@@ -54,12 +54,57 @@ delay(100) // step 1
 
 // one way of catching errors
 
+/*
 var p = Promise.resolve(42);
 
 p.then(
     function fulfilled(msg) {
-        // numbers don't have string functions,
-        // so will throw an error
         console.log(msg.toLowerCase());
     }
-). done(null, handleErrors); // <-if this handle errors fails then its error would be thrown globally.
+).done(null, handleErrors); // <-if this handle errors fails then its error would be thrown globally.
+
+*/
+
+// patterns
+
+// promise.All([...]) - Allows us to process async code parallel.
+// promise.Race([...]) - aka. the Latch - drops some promises.
+// both of these will fulfill if and when any Promise resolution is a fulfillment, and it
+// both of these will reject if and when any Promise resolution is a rejection.
+// Promises cannot be cancelled
+// Promise.none() and Promise.All() - either reject all promise or accept all
+// Promise.any()
+// Promise.first()
+// Promise.last()
+
+//Concurrent Iterations - use map
+
+if (!Promise.map) {
+    Promise.map = function (vals, cb) {
+        return Promise.all(
+            vals.map(function (val) {
+                return new Promise(function (resolve) {
+                    cb(val, resolve);
+                });
+            })
+        );
+    };
+}
+
+var p1 = Promise.resolve(21);
+var p2 = Promise.resolve(42);
+var p3 = Promise.reject("Oops");
+// double values in list even if they're in
+// Promises
+
+Promise.map([p1, p2, p3], function (pr, done) {
+    Promise.resolve(pr)
+        .then(
+            function (v) {
+                done(v * 2);
+            },
+            done
+        );
+}).then(function (vals) {
+    console.log(vals);
+});
