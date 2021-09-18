@@ -108,3 +108,8 @@ Promise.map([p1, p2, p3], function (pr, done) {
 }).then(function (vals) {
     console.log(vals);
 });
+
+// conclusion
+
+// prractise these heavly they areb very important
+// don't get ready of callbacks
