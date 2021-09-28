@@ -41,7 +41,40 @@ console.log(a);
     const a = 10;
     console.log(a);
 
-   //  a++; should never change as it is a constant
+    //  a++; should never change as it is a constant
 }
 
 // Constants are not a restriction on the value itself, but on the variable’s assignment of that value.
+
+// don't rely on const for code behaviour
+
+// Block scoped functions
+
+{
+    function foo() {
+        console.log("cannot be called from outside!");
+    }
+}
+
+// foo(); -> reference error hence not defined.
+
+// Rest/ Spread the ... operator
+
+function foo(x, y, z) {
+    console.log(x, y, z);
+}
+
+foo(...[1, 2, 3]); // spreads it into individual components
+
+// can also be used to declare an array inside another array.
+var y = [2, 3, 5];
+var b = [1, ...y, 4]
+
+console.log(b.sort());
+
+// gathers all arguments if no named one are given
+function boo(x, y, ...z) {
+    console.log(x, y, z);
+}
+
+boo(1, 2, 3, 4, 5);
