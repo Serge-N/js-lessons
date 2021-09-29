@@ -6,7 +6,7 @@ a = b * 2;
 
 console.log(a);
 
-//Converting between Types
+// Converting between Types
 
 var c = "42";
 

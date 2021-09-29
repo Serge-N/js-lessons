@@ -6,6 +6,7 @@ function calculateFinalPurchaseAmount(amt) {
     // return the new amount
     return amt;
 }
+
 var amount = 99.99;
 amount = calculateFinalPurchaseAmount(amount);
 console.log(amount.toFixed(2));
