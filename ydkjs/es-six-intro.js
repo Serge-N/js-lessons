@@ -78,3 +78,39 @@ function boo(x, y, ...z) {
 }
 
 boo(1, 2, 3, 4, 5);
+
+
+// default parameters
+// for functon arguments undefined means missing 
+
+function qoo(x = 11, y = 31) {
+    console.log(x + y);
+}
+
+qoo();
+
+qoo(4,5);
+
+// A rest parameter does not support defualt parameters.
+
+// default value expressions
+
+function bar(val){
+    console.log("baz called");
+    return y + val;
+}
+
+function woo(x =y+3, z = bar(x)){
+    console.log(x,z);
+}
+
+var y =5;
+
+woo();
+
+y= 6;
+
+woo(undefined, 10);
+
+
+// Detructurings
