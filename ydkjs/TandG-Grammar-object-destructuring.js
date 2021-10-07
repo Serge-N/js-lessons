@@ -30,3 +30,5 @@ foo({
   a: "hello",
   b: "destructing"
 });
+
+// used for acquiring only essential data from the object. 
