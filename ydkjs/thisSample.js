@@ -15,12 +15,8 @@ var you = {
     name: "serge"
 };
 
-
-
 identify.call( me );
 identify.call( you );
-
-
 
 speak.call( me );
 speak.call( you );
