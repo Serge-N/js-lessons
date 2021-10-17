@@ -1,5 +1,4 @@
 // mixins where created to mimick the behaviour of classes in js
-
 // this is an explict-mixin example
 // vastly simplied `mixin(..)` exmaple:
 function mixin(sourceObj, targetObj) {
