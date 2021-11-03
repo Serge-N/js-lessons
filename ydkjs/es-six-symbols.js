@@ -14,3 +14,24 @@ console.log(typeof sym);
 
 console.log(sym.description);
 console.log(sym.toString());
+
+// symbol registry
+// the setback is usually these are stored in the outter scope.
+
+// as such it is possible to create a symbol registry.
+
+const EVT_LOGIN = Symbol.for( "event.login" );
+
+console.log(EVT_LOGIN);
+// symbol.for(..) - can retrieve any symbhol from the registry
+// symbols where made to replace the use of magic strings
+
+// symbol as object props
+
+//ES 6 has free symbols as well.
+
+var a = [1,2,3];
+
+console.log(a[Symbol.iterator]); 
+
+// the above are not global values but rather properties of Symbol function object
